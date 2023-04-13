@@ -34,7 +34,7 @@ export class CreateProductComponent implements OnInit {
    }
    buildForm(){
      this.myProductForm = this.formBuilder.group({
-      productName: new FormControl ('', [Validators.required, Validators.minLength(2), Validators.maxLength(30)]),
+      productName: new FormControl ('', [Validators.required, Validators.minLength(2), Validators.maxLength(300)]),
        quantity: new FormControl ('', [Validators.required, Validators.pattern(/^[0-9]*$/)]),
        price: new FormControl ('', [Validators.required, Validators.pattern(/^[0-9]*$/)]),
        description: new FormControl ('', Validators.required),
