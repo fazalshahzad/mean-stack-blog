@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   selectSize = ["S", "M", "L", "X-L", "XX-L"];
   newSizeArray: any;
   p: number = 1
-  pageItem: number = 6
+  pageItem: number = 8
   totalProduct: any;
   selectedProduct: any;
   product:any;
@@ -41,8 +41,12 @@ export class HomeComponent implements OnInit {
     AOS.init();
     this.getProductDatafromservice.getProduct().subscribe((res: any) => {
       this.ProductArray = res.Result;
+      this.ProductArray.sort((a: product, b: product) => {
+        return new Date(b['createdAt']).getTime() - new Date(a['createdAt']).getTime();
+});
       this.totalProduct = this.ProductArray.length;
     });
+    
 
   
   }
@@ -59,7 +63,6 @@ export class HomeComponent implements OnInit {
     this.cartService.addToCart(this.product);
     this.Router.navigateByUrl('/cart');
   }
- 
   toggleProductDescription(event: MouseEvent) {
     event.preventDefault(); // prevent the default link behavior
     const targetElement = event.target as HTMLElement;
