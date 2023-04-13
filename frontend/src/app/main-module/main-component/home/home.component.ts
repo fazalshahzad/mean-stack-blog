@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   selectSize = ["S", "M", "L", "X-L", "XX-L"];
   newSizeArray: any;
   p: number = 1
-  pageItem: number = 8
+  pageItem: number = 6
   totalProduct: any;
   selectedProduct: any;
   product:any;

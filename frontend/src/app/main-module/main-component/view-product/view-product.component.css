@@ -1,3 +1,19 @@
+
+
+#hero{
+    background-image: url("../../../../assets/img/banner/b19.jpg");
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+  }
+
 .banner::before {
     content: " ";
     height: 100%;
@@ -280,7 +296,7 @@
 /******************************************************************************************************** Product-view  */
 .gallery {
   width: 40px;
-  min-width: 250px;
+  min-width: 400px;
   padding: 10px 12px;
   border: 1px solid #cce7d0;
   border-radius: 25px;
@@ -344,6 +360,7 @@
 
   #page{
     padding: 0px 0px 90px 0px;
+    margin-top: 30px;
   }
 
 

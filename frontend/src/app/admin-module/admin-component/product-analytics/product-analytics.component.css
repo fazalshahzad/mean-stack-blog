@@ -19,3 +19,9 @@
     box-shadow: 2px 2px 20px 2px rgb(232, 232, 232);
 }
 
+
+#product-description {
+    max-height: 100px; /* set to a value that works for your design */
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* add a smooth transition effect */
+  }

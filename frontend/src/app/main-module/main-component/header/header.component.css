@@ -73,6 +73,7 @@ margin-left: 2px;
 .menu-items{
     order: 2;
     display: flex;
+    justify-items: center;
 
 }
 
@@ -81,6 +82,7 @@ margin-left: 2px;
     list-style: none;
     margin-left: 1.5rem;
     font-size: 1.2rem;
+    justify-items: center;
 }
 
 .navbar a{
