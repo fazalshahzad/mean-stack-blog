@@ -1,35 +1,10 @@
-<div id="body">
-<!-- <div class="bg-img">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-12" data-aos="fade-up"
-            data-aos-duration="3000">
-                <h1 class="text-white banner-heading">Mens
-                    FootWear <span style="color: red;" >Shoes</span> </h1>
-                    <h3 class="banner-heading2">Winter Fashion</h3>
-
-        <button class="button-1" role="button"><span class="text">Explore</span><span>Products</span></button>
-
-            </div>
-            <div class="col-md-6 col-sm-12">
-               <div class="banner-img" data-aos="fade-left"
-               data-aos-duration="3000"></div>
-            </div>
-        </div>
-    </div>
-    </div> -->
+<div>
 
 
-
-<!-- edited banner -->
-
-<section id="hero">
-  <h4>Trade-in-Offer</h4>
-  <h2>Super value deals</h2>
-  <h1>On all products</h1>
-  <p>Save more with coupons & up to 70% off!</p>
- <a routerLink="/product"><button role="button">Shop Now</button></a>
-</section>
+    <section id="hero">
+        <h2>#ReadMore</h2>
+        <p>Read all case studies about our products!</p>
+    </section>
 
 
 
@@ -39,71 +14,86 @@
     <section class="category">
         <div class="container">
             <div class="title text-center mt-5">
-             
-            
+
+
                 <!---------------------------------------------------------------------Product-Section --------------------------->
-                <div class="col-xl-9">
-                        <div class="container">
+                <div class="">
+                    <div class="container">
 
-                              <!--------------------------------------------------------------------- Product-View-1 --------------------------->
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6 d-flex justify-content-center" *ngFor="let item of ProductArray | paginate: { itemsPerPage: 9, currentPage: p }">
-                                    <div class="wrapper" *ngIf="productView === true">
-
-
-
-
-                                      <section id="product1" class="section-p1">
+                        <!--------------------------------------------------------------------- Product-View-1 --------------------------->
+                        <div class="row">
+                            <div class=""
+                                *ngFor="let item of ProductArray | paginate: { itemsPerPage: 9, currentPage: p }">
+                                <div class="wrapper" *ngIf="productView === true">
 
 
-                                        <div class="pro-container">
-                                            <div class="pro"  (click)="reDirectSingleProductPage(item._id)">
-                                                <img [src]="Url+item.ProductImages[0].ProductImageUrl" alt="">
-                                        <div class="des">
-                                        <span>{{item.productName}}</span>
-                                        <h5>{{item.description}}</h5>
-                                        <div class="star">
-                                        <i class="">size: {{item.size}}</i>
 
 
+
+
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                            <!-- new styling -->
+
+                            <link
+                                href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap"
+                                rel="stylesheet">
+
+
+
+
+
+
+                            <div class="container" id="body">
+                                <div class="card "
+                                    *ngFor="let item of ProductArray | paginate: { itemsPerPage: 9, currentPage: p }">
+                                    <figure class="card__thumb" (click)="reDirectSingleProductPage(item._id)">
+                                        <img [src]="Url+item.ProductImages[0].ProductImageUrl" alt=""
+                                            class="card__image">
+                                        <div class="card__caption">
+                                            <h2 class="card__title">{{item.productName}}</h2>
+                                            <p class="card__snippet">{{item.description}}</p>
+                                            <a href="" class="card__button"
+                                            (click)="reDirectSingleProductPage(item._id)">Read more</a>
                                         </div>
-                                        <h4> ${{item.price}} </h4>
-                                        </div>
-                                        <a routerLink="" (click)="addToCart()" ><i id="cart" class="fa-solid fa-cart-shopping"   ></i></a>
+                                    </figure>
+                                </div>
 
 
-                                            </div>
-                                        </div>
-
-
-                                        </section>
+                            </div>
 
 
 
 
-                                        </div>
-                                        </div>
-
-
-
-
-
-                                       
-
-                    <div class="mt-5 text-center">
-                        <pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+                            <div class="mt-5 text-center">
+                                <pagination-controls class="my-pagination"
+                                    (pageChange)="p = $event"></pagination-controls>
+                            </div>
+                        </div>
                     </div>
-                        </div>
-                        </div>
 
                 </div>
 
-                </div>
+            </div>
         </div>
     </section>
-   
-  
-  
+
+
+
+
+
+
+
 
 
 

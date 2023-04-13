@@ -59,7 +59,19 @@ export class HomeComponent implements OnInit {
     this.cartService.addToCart(this.product);
     this.Router.navigateByUrl('/cart');
   }
-
+ 
+  toggleProductDescription(event: MouseEvent) {
+    event.preventDefault(); // prevent the default link behavior
+    const targetElement = event.target as HTMLElement;
+    const productDesc = targetElement.previousElementSibling as HTMLElement; // explicitly type productDesc as HTMLElement
+    if (productDesc) {
+      productDesc.style.maxHeight = productDesc.style.maxHeight === 'none' ? '100px' : 'none'; // toggle the max-height property
+    }
+  }
+  
+  
+  
+  
 
 
 }
