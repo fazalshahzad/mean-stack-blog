@@ -14,7 +14,7 @@ app.use(express.text());
 app.use(express.raw());
 app.use(cors());
 
-app.use('/assets',express.static('assets')); //Route in image path
+app.use('/assets',express.static('Assets')); //Route in image path
 //Block Start Initialize the app
 
 
