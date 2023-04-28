@@ -12,7 +12,3 @@ for(let dependencies in Package.dependencies){      //loop in object keys so use
     else {console.log(`Error:Not Connected to the MongoDb` + error)}
 })
 
-// useNewUrlParser:true (protocols or database rules ) allow to convert BSON (Binary-javascript-object-notation) (0-1 form) Data to Json
-
-//mongoose.connect('mongodb+srv://ecom-123:ecom-123@e-commerce.pgkqfrl.mongodb.net/E-Commerce?retryWrites=true&w=majority',
-//{useNewUrlParser:true,useUnifiedTopology:true},(error,connection)=>{ 1st step without dev.env 
